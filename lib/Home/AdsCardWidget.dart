@@ -47,7 +47,7 @@ class _AdsCardWidgetState extends State<AdsCardWidget> {
                 isVisible = false;
               });
             },
-            child: const Icon(Icons.close, size: 20, color: AppColors.textDark),
+            child: SvgPicture.asset('assets/Vector (5).svg'),
           ),
         ],
       ),

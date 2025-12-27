@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task1/Home/SearchbarWidget.dart';
+import 'package:task1/Home/portfolio_card_widget.dart';
 
 import '../utils/colors.dart';
 import 'AdsCardWidget.dart';
@@ -19,6 +20,8 @@ class Dashboard extends StatelessWidget {
               SearchBarWidget(),
               SizedBox(height: 16),
               AdsCardWidget(),
+              SizedBox(height: 16),
+              PortfolioCardWidget(),
             ],
           ),
         ),
