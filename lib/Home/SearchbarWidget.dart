@@ -12,7 +12,6 @@ class SearchBarWidget extends StatelessWidget {
 
     return Row(
       children: [
-        /// 🔍 SEARCH TEXT FIELD
         Expanded(
           child: Container(
             height: 48,
@@ -46,8 +45,6 @@ class SearchBarWidget extends StatelessWidget {
         ),
 
         const SizedBox(width: 12),
-
-        /// 📷 ICON BOX (SEPARATE)
         Container(
           height: 48,
           width: 48,
