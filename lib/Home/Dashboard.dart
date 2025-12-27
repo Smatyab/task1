@@ -4,11 +4,19 @@ import 'package:task1/Home/TopRankingFunds.dart';
 import 'package:task1/Home/category_row_widget.dart';
 import 'package:task1/Home/portfolio_card_widget.dart';
 
+import '../utils/CustomBottomNavigationBar.dart';
 import '../utils/colors.dart';
 import 'AdsCardWidget.dart';
 
-class Dashboard extends StatelessWidget {
+class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
+
+  @override
+  State<Dashboard> createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +26,7 @@ class Dashboard extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: double.infinity, // Ensures it stretches edge-to-edge
+              width: double.infinity,
               color: AppColors.primary,
               padding: const EdgeInsets.only(
                 top: 50,
@@ -41,12 +49,21 @@ class Dashboard extends StatelessWidget {
                   CategoryRowWidget(),
                   SizedBox(height: 16),
                   TopRankingFundsWidget(),
-                  SizedBox(height: 20), // Bottom spacer
+                  SizedBox(height: 20),
                 ],
               ),
             ),
           ],
         ),
+      ),
+
+      bottomNavigationBar: CustomBottomNavigationBar(
+        currentIndex: currentIndex,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
       ),
     );
   }
