@@ -1,7 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
-import 'package:task1/Home/Dashboard.dart';
+
+import 'Route/app_routes.dart';
 
 void main() {
   runApp(
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Task',
-      home: const Dashboard(),
+      initialRoute: AppRoutes.dashboard,
+      routes: AppRoutes.routes,
     );
   }
 }

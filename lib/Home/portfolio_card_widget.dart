@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../MyInvestment/MyInvestment.dart';
+import '../Route/app_routes.dart';
 import '../utils/colors.dart';
 
 class PortfolioCardWidget extends StatelessWidget {
@@ -12,10 +12,7 @@ class PortfolioCardWidget extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(14),
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const MyInvestment()),
-        );
+        Navigator.pushNamed(context, AppRoutes.myInvestment);
       },
       child: Container(
         padding: const EdgeInsets.all(16),

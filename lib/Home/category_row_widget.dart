@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Route/app_routes.dart';
 import '../utils/category_item_widget.dart';
 import '../utils/colors.dart';
 
@@ -27,22 +28,30 @@ class CategoryRowWidget extends StatelessWidget {
             CategoryItemWidget(
               iconPath: 'assets/mutual_fund.svg',
               title: 'Mutual Funds',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.myInvestment);
+              },
             ),
             CategoryItemWidget(
               iconPath: 'assets/fixdeposite.svg',
               title: 'Fixed Deposit',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.myInvestment);
+              },
             ),
             CategoryItemWidget(
               iconPath: 'assets/investment.svg',
               title: 'Investment',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.myInvestment);
+              },
             ),
             CategoryItemWidget(
               iconPath: 'assets/sip.svg',
               title: 'SIP',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.myInvestment);
+              },
             ),
           ],
         ),
