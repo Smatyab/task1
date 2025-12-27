@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task1/utils/investment_filter_tab.dart';
 
 import '../utils/colors.dart';
+import 'investment_list_widget.dart';
 
 class MyInvestment extends StatelessWidget {
   const MyInvestment({super.key});
@@ -32,7 +33,12 @@ class MyInvestment extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(children: const [SizedBox(height: 16)]),
+                child: Column(
+                  children: const [
+                    const SizedBox(height: 16),
+                    InvestmentListWidget(),
+                  ],
+                ),
               ),
             ],
           ),
